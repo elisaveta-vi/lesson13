@@ -1,0 +1,394 @@
+@import "null.css";
+
+.wrapper {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background-image: url("../img/sky.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.carcass {
+	position: relative;
+	height: 350px;
+	width: 860px;
+	overflow: hidden;
+	
+	}
+/* .carcass__hood {
+	height: 200px;
+	border-right: 165px solid rgb(224, 13, 13);
+	border-top: 60px solid transparent;
+	position: absolute;
+	left: 10px;
+	top: 150px;
+	
+} */
+.carcass__hood-box {
+	perspective: 400px;
+	perspective-origin: left 90px;
+	width: 165px;
+	height: 200px;
+	left: 0;
+	top: 170px;
+	position: absolute;
+	transform: rotate(-90deg);
+}
+.carcass__hood {
+	width: 170px;
+	height: 200px;
+	transform: rotateX(40deg);
+	background-color: rgb(224, 13, 13);
+	border: 2px solid black;
+	border-bottom: 0;
+	border-radius: 0 40px 0 0;
+	position: relative;
+}
+
+.carcass__middle-carcass {
+	width: 665px;
+height: 200px;
+background-color: rgb(224, 13, 13);
+position: absolute;
+left: 173px;
+top: 150px;
+border: 2px solid black;
+border-top: 0;
+border-left: 0;
+}
+.carcass__middle-carcass::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 31px;
+	left: -91px;
+	width: 125px;
+	height: 4px;
+	transform: rotate(340deg);
+	background-color: black;
+}
+.carcass__middle-carcass::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 100px;
+	left: 164px;
+	width: 193px;
+	height: 2px;
+	transform: rotate(90deg);
+	background-color: black;
+}
+.handle {
+	position: absolute;
+	top: 164px;
+	left: 347px;
+	width: 60px;
+	height: 20px;
+	border-radius: 16px;
+	background-color: transparent;
+	border: 2px solid black;
+}
+.handle::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	left: 9px;
+	background-color: white;
+	width: 16px;
+	height: 6px;
+	border-radius: 5px;
+}
+
+.cabine {
+	width: 260px;
+	height: 150px;
+border: 2px solid black;
+border-bottom: 0;
+border-radius: 79% 21% 0% 100% / 100% 0% 100% 0%;
+position: absolute;
+top: 0;
+left: 175px;
+background-color: rgb(224, 13, 13);
+}
+.cabine-small {
+transform: scale(0.8);
+background-color: rgb(179, 222, 243);
+}
+
+.ark {
+	height: 180px;
+	width: 180px;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 260px;
+	left: 115px;
+}
+
+.wheel {
+	height: 160px;
+	width: 160px;
+	background-color: grey;
+	border-radius: 50%;
+	position: absolute;
+	top: 265px;
+	left: 124px;
+	z-index: 5;
+	
+	border: 2px solid black;
+	animation: wheel 1s linear infinite;
+}
+
+@keyframes wheel {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+
+.wheel__wheel-in {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	border: 2px solid black;
+}
+.wheel__wheel-in-narrow {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: black;
+}
+.wheel__stick {
+	height: 4px;
+	width: 115px;
+	position: absolute;
+	background-color: rgb(170, 155, 155);
+	top: 56px;
+	left: 0px;
+}
+.wheel__stick-1 {
+	transform: rotate(72deg);
+}
+.wheel__stick-2 {
+	transform: rotate(144deg);
+}
+.wheel__stick-3 {
+	transform: rotate(216deg);
+}
+.wheel__stick-4 {
+	transform: rotate(288deg);
+}
+.wheel__center {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: grey;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.ark-right {
+	left: 560px;
+}
+.wheel-right {
+	left: 570px;
+}
+
+.trank {
+	width: 412px;
+	height: 15px;
+	background-color: rgb(224, 13, 13);
+	border: 2px solid black;
+	position: absolute;
+	top: 143px;
+	left: 431px;
+	border-radius: 10px;
+}
+.bumper-box {
+	width: 105px;
+height: 54px;
+position: absolute;
+top: 304px;
+left: 743px;
+perspective: 400px;
+perspective-origin: 100% 100%;
+
+}
+.bumper {
+width: 127px;
+height: 54px;
+background-color: gray;
+border-radius: 20px;
+border: 2px solid black;
+transform: rotateY(317deg);
+}
+
+.bumper-front-box {
+	width: 100px;
+	height: 80px;
+	top: 292px;
+	left: 0;
+position: absolute;
+perspective: 400px;
+perspective-origin: 100% 0;
+}
+
+.bumper-front {
+	width: 100px;
+	height: 80px;
+	background-color: gray;
+border-radius: 20px;
+border: 2px solid black;
+position: absolute;
+transform: rotateX(45deg);
+z-index: 20;
+}
+.bumper-front-box {
+	transform: rotate(180deg);
+	transform: scale(1, -1);
+}
+.light {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: grey;
+	position: absolute;
+	top: 208px;
+	left: 35px;
+	transform: scaleY(1.2);
+	border: 1px solid black;
+}
+.light-yellow {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	background-color: rgb(254, 254, 193);
+	border: 1px solid black;
+}
+.white {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	background-color: white;
+}
+.mirrow {
+	position: absolute;
+	width: 25px;
+	height: 70px;
+	background-color: rgb(224, 13, 13);
+	border: 2px solid black;
+	border-radius: 20px 0 0 20px;
+	top: 90px;
+	left: 200px;
+	transform: rotate(-5deg);
+	
+}
+.mirrow-set-box {
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	perspective: 50px;
+	top: 31px;
+	left: -22px;
+	transform: rotate(255deg);
+	
+}
+.mirrow-set {
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	background-color: rgb(180, 10, 10);
+	border: 2px solid black;
+	transform: rotateX(45deg);
+	border-radius: 20px 20px 0 0 ;
+}
+.mirrow-top {
+	position: absolute;
+	width: 25px;
+	height: 70px;
+	background-color: rgb(224, 13, 13);
+	border: 2px solid black;
+	border-radius: 20px 0 0 20px;
+	top: 0;
+	left: 0;
+	transform: rotate(-5deg);
+}
+.mirrow-top::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -13px;
+	left: -4px;
+	width: 25px;
+	height: 70px;
+	border-radius: 20px 0 0 20px;
+	background-color: white;
+	transform: scale(0.4);
+}
+
+/* ----------------------------------------- */
+
+
+
+.road {
+	height: 220px;
+	width: 500%;
+		background-image: url("../img/lines-of-traffic-on-paved-roads-background.jpg");
+	background-repeat: repeat;
+	background-size: contain;
+	position: absolute;
+	bottom: 0;
+  left: 0;
+  right: 0;
+  animation: road 5s linear infinite;
+}
+@keyframes road {
+	100% {
+	  transform: translateX(-3400px);
+	}
+}
+
+.car {
+	transform: scale(-1,1);
+		display: inline-block;
+		position: absolute;
+		top: 380px;
+		left: 0%;
+		z-index: 100;
+	}
+
+	.town {
+		height: 500px;
+		width: 500%;
+		background-image: url("../img/sity.png");
+		background-repeat: repeat;
+		background-size: contain;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 200px;
+		animation: town 20s linear infinite;
+	}
+	@keyframes town {
+100% {
+	transform: translateX(-3400px);
+}
+	}
